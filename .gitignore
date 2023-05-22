@@ -1,0 +1,4 @@
+.db
+vendor
+.env
+phinx.php
