@@ -16,6 +16,7 @@
         "larapack/dd": "^1.1",
         "vlucas/phpdotenv": "^5.5",
         "league/plates": "^3.5",
-        "robmorgan/phinx": "^0.13.4"
+        "robmorgan/phinx": "^0.13.4",
+        "symfony/yaml": "^6.2"
     }
 }
