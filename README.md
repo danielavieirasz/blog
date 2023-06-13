@@ -1,6 +1,4 @@
-# MovieFlix
-
-Este projeto corresponde à tutoria prestada por mim aos alunos do quinto semestre do curso de Análise e Desenvolvimento de Sistemas da UNIASSELVE, a fim de instruí-los como subir uma aplicação PHP utilizando Docker e a construção de um mini framework nesta linguagem, para que os ampare no desenvolvimento da aplição correspondente a este repositório.
+Este projeto corresponde à tutoria prestada por Sergio Danilo a aluna Daniela do quinto semestre do curso de Análise e Desenvolvimento de Sistemas da UNIASSELVE, a fim de instruí-los como subir uma aplicação PHP utilizando Docker e a construção de um mini framework nesta linguagem, para que os ampare no desenvolvimento da aplição correspondente a este repositório.
 
 ## Requisitos
 

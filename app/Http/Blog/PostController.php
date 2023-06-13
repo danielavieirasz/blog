@@ -1,31 +1,32 @@
 <?php
 
 namespace App\Http\Blog;
-
 use Framework\Database\Connection;
 use Framework\Http\Controller;
 
-class HomeController extends Controller
+class PostController extends Controller
 {
-    public function __invoke()
+
+    public function __invoke($request,$params)
     {
         //conexão com o banco de dados
 
         $conn = Connection::getInstance();
 
-        $stmt = $conn->prepare('SELECT * from posts');
+        $stmt = $conn->prepare("SELECT * from posts WHERE slug = '{$params['slug']}' ");
 
         $stmt->execute();
 
-        $posts = $stmt->fetchAll();
+        $post = $stmt->fetch();
 
         //====
 
-        $view = $this->view->render('blog::home',['posts'=>$posts, 'title'=>'Bem vindo ao blog']);
+        $view = $this->view->render('blog::show',['post'=>$post]);
 
         $this->response->getBody()->write($view);
 
         return $this->response;
 
     }
+
 }
