@@ -34,7 +34,7 @@ class Connection
         return self::$instance;
     }
 
-    private static function loadConfigs()
+    private static function loadconfig()
     {
         $config = new Config;
 
@@ -43,27 +43,27 @@ class Connection
 
     private static function dns()
     {
-        $configs = self::loadConfigs();
+        $config = self::loadconfig();
 
-        $configs['port'] = $configs['port'] ?? '3306';
+        $config['port'] = $config['port'] ?? '3306';
 
-        return self::$driver . ":host={$configs['host']};dbname={$configs['database']};port={$configs['port']}";
+        return self::$driver . ":host={$config['host']};dbname={$config['database']};port={$config['port']}";
     }
 
     private static function username()
     {
-        return self::loadConfigs()['username'];
+        return self::loadconfig()['username'];
     }
 
     private static function password()
     {
-        return self::loadConfigs()['password'];
+        return self::loadconfig()['password'];
     }
     
     private static function options()
     {
-        return !empty(self::loadConfigs()['options'])
-            ? self::loadConfigs()['options']
+        return !empty(self::loadconfig()['options'])
+            ? self::loadconfig()['options']
             : null;
     }
 }

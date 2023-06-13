@@ -10,7 +10,7 @@ class Config
 
     public function load(string $config)
     {
-        $configDir = __DIR__.'/../../configs';
+        $configDir = __DIR__.'/../../config';
 
         if(! file_exists($path = ($configDir."/".$config.".php"))){
            throw new Exception('Config file not found in '.$path);
