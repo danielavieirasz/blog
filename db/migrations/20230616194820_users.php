@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CreateTableUsers extends AbstractMigration
+final class Users extends AbstractMigration
 {
     public function up()
     {

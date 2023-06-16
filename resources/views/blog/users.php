@@ -1,0 +1,1 @@
+<?php $this->layout('blog::_layout', [ 'title'=> $user->user ]) ?>

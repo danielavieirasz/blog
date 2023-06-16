@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CreatePostsTable extends AbstractMigration
+final class Posts extends AbstractMigration
 {
     public function up()
     {
@@ -12,6 +12,6 @@ final class CreatePostsTable extends AbstractMigration
         ->addColumn('slug', 'string')
         ->addColumn('content', 'text')
         ->addColumn('created_at', 'timestamp')
-        ->create();
+        ->create();        
     }
 }
